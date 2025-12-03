@@ -1,87 +1,265 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <title>Curriculum</title>
-        <meta charset="utf-8">
-        <style>
-            html{background:grey;font-family:sans-serif;font-size:11px;} 
-            body{width:600px;background:white;margin:auto;display: flex;}
-            #izquierda img{width:100%;padding: 10px;width: 150px; height: 100px;}
-            #izquierda{flex:2;background:SteelBlue;padding:29px; color: white;}
-            #derecha{flex:4;padding:20px;}
-            #derecha article *{padding:1px;margin:1px;}
-            #Persona h1{color: SteelBlue;}
-            #Persona hr{height: 10;}
-        </style>
-    </head>
-    <body>
-        <section id="izquierda">
-            <img src="bry.png">
-            <hr>
-            <article>
-            <h3><b>Contacto</b></h3>
-            <h4>Télefono: 624 47 3659</h4>
-            <h4>Gmail: bc714006@gmail.com</h4>
-            <h4>Valencia, España</h4><br>
-            <hr>
-            </article>
-            <article>
-            <h3><b>Mis habilidades</b></h3>
-            <h4>Proactivo</h4>
-            <h4>Organizado</h4>
-            <h4>Responsable</h4>
-            <h4>Creativo</h4><br>
-            <hr>
-            </article>
-            <article>
-            <h3><b>Otros Datos</b></h3>
-                <h4>Flexibilidad horaria</h4>
-                <h4>Disponibilidad geografica</h4>
-            </article>
-        </section>
-        <section id="derecha">
-            <div id="Persona">
-                <h1>Bryan Alejandro Avila Castro</h1>
-                <hr>
-                <div id="descripcion">
-                    <h2>Estudiante de DAW, Responsable y aportador de ideas.</h2>
-                    <hr>
-                    <h3><b>Descripción personal</b></h3>
-                    <p>Soy graduado de barchillerato en ciencias, poseo conocimientos en el area de programación y suelo usar lenguajes como java y python. Soy proactivo y me gusta hacer mis proyectos de forma independiente ademas soy bueno trabajando en equipo y me suelo desenvolver rapidamente para trabajar con mayor comodidad con mi grupo de trabajo.</p>
-                </div>
+
+<head>
+    <title>Currículum – Bryan Avila</title>
+    <meta charset="utf-8">
+
+    <style>
+        :root {
+            --bg-dark: #0f0f17;
+            --bg-panel: #1a1a27;
+            --bg-light: #252536;
+            --text-main: #ffffff;
+            --text-muted: #c9c9d9;
+            --accent: #7c5cff;
+            --accent-light: #9b82ff;
+        }
+
+        html {
+            background: #0f0f17;
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        body {
+            max-width: 1150px;
+            margin: 50px auto;
+            display: flex;
+            background: var(--bg-panel);
+            border-radius: 18px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        #izquierda {
+            flex: 1.2;
+            background: linear-gradient(180deg, var(--bg-light), #1b1b42);
+            padding: 40px 30px;
+            color: var(--text-main);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        #izquierda img {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        #izquierda h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        #izquierda h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        #izquierda h4 {
+            font-weight: 400;
+            margin: 5px 0;
+        }
+
+        #derecha {
+            flex: 2.8;
+            padding: 50px 60px;
+            color: var(--text-muted);
+        }
+
+        #derecha h1 {
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        #derecha h2 {
+            color: var(--text-main);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        #derecha h3 {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-top: 20px;
+        }
+
+        #derecha article {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        #derecha article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .text {
+            display: inline-block;
+            padding: 8px 14px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .text:hover {
+            background: var(--accent-light);
+        }
+
+        .habilidad {
+            margin-bottom: 12px;
+        }
+
+        .barra {
+            background: rgba(255, 255, 255, 0.2);
+            height: 8px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .llena {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+
+        .habilidad1 {
+            margin-bottom: 12px;
+        }
+
+        .barra1 {
+            background: rgba(255, 255, 255, 0.2);
+            height: 8px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .llena1 {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="izquierda">
+        <img src="bry.png" alt="Bryan Avila"><br>
+        <hr>
+        <h3>Contacto</h3>
+        <h4>Teléfono: 624 47 3659</h4>
+        <h4>Email: bc714006@gmail.com</h4>
+        <h4>Valencia, España</h4><br>
+        <hr>
+
+        <h3>Mis habilidades</h3>
+        <div class="habilidad">
+            Proactivo
+            <div class="barra">
+                <div class="llena" style="width: 90%;"></div>
             </div>
-            <div id="experiencia">
-                <hr>
-                <h3><b>Estudios Realizados</b></h3>
-                <article>
-                    <div class="texto">
-                        <h4>Barchillerato</h4>
-                        <h5>2018 - 2023 - U.E.P "San Francisco de Sales"</h5>
-                    </div>
-                </article>
+        </div>
+        <div class="habilidad">
+            Organizado
+            <div class="barra">
+                <div class="llena" style="width: 85%;"></div>
             </div>
-            <div id="voluntariado">
-                <hr>
-                <h3><b>Voluntariado</b></h3>
-                <article>
-                    <div class="texto">
-                        <h4>Labor social</h4>
-                        <h5>2022 - 2023 - U.E.P "San Francisco de Sales"</h5>
-                        <p>Realicé tareas en el area de administración en el colegio U.E.P "San Francisco de Sales", organizando documentación de alumnos, estar al tanto de los pases de entrada de los estudiantes y documentar sus faltas. Ademas de brindar apoyo a los estudiantes.</p>
-                    </div>
-                </article>
+        </div>
+        <div class="habilidad">
+            Responsable
+            <div class="barra">
+                <div class="llena" style="width: 80%;"></div>
             </div>
-            <div id="formacion">
-                <hr>
-                <h3><b>Formación complementaria</b></h3>
-                <article>
-                    <div class="texto">
-                        <h4>Estudios online</h4>
-                        <h5>2024 - 2024 - Sololearn.com</h5>
-                        <p>Aprendí a usar el lenguaje de programación Java en sus niveles de principiante y intermedio.</p>
-                    </div>
-                </article>
+        </div>
+        <div class="habilidad">
+            Creativo
+            <div class="barra">
+                <div class="llena" style="width: 75%;"></div>
             </div>
-        </section>
-    </body> 
+        </div><br>
+        <hr>
+
+        <h3>Lenguajes que manejo</h3>
+        <div class="habilidad1">
+            CSS
+            <div class="barra1">
+                <div class="llena1" style="width: 50%;"></div>
+            </div>
+        </div>
+        <div class="habilidad1">
+            HTML
+            <div class="barra1">
+                <div class="llena1" style="width: 65%;"></div>
+            </div>
+        </div>
+        <div class="habilidad1">
+            Python
+            <div class="barra1">
+                <div class="llena1" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="habilidad1">
+            Java
+            <div class="barra1">
+                <div class="llena1" style="width: 40%;"></div>
+            </div>
+        </div>
+        <div class="habilidad1">
+            SQL
+            <div class="barra1">
+                <div class="llena1" style="width: 45%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="derecha">
+        <h1>Bryan Alejandro Avila Castro</h1>
+        <hr>
+        <h2>Descripción personal</h2>
+        <article>
+            <p>Soy graduado de bachillerato en ciencias, poseo conocimientos en programación y suelo usar Java y Python.
+                Soy proactivo y me gusta hacer mis proyectos de forma independiente. También trabajo bien en equipo y me
+                adapto rápido para colaborar eficientemente.</p>
+        </article>
+
+        <h2>Estudios Realizados</h2>
+        <article>
+            <p>Bachillerato</p>
+            <p>2018 - 2023 - U.E.P "San Francisco de Sales"</p>
+        </article>
+
+        <h2>Voluntariado</h2>
+        <article>
+            <p>Labor social</p>
+            <p>2022 - 2023 - U.E.P "San Francisco de Sales"</p>
+            <p>Realicé tareas en administración, organización de documentación y apoyo a estudiantes.</p>
+        </article>
+
+        <h2>Formación complementaria</h2>
+        <article>
+            <p>Estudios online</p>
+            <p>2024 - Sololearn.com</p>
+            <p>Aprendí a usar el lenguaje de programación Java en niveles principiante e intermedio.</p>
+        </article>
+    </section>
+</body>
+
 </html>
